@@ -6,7 +6,7 @@ console.log('Enter an integer:');
 const number1 = parseInt(readline.prompt());
 console.log('Enter another integer:');
 const number2 = parseInt(readline.prompt());
-if (operator1 == '+') {
+if (operator1 == '+') { //this whole section could also be done with a switch
     console.log(number1+number2);
 } else if (operator1 == '*') {
     console.log(number1*number2);
