@@ -1,4 +1,7 @@
-for (let number = 1; number < 105*17+1; number++) {
+const readline = require('readline-sync');
+console.log('Enter an integer')
+const maximum = parseInt(readline.prompt());
+for (let number = 1; number < maximum+1; number++) {
     let output = '';
     if (number % 3 === 0) {
         output += 'Fizz'; //adds 'Fizz' to the output if number is a multiple of 3
@@ -20,14 +23,14 @@ for (let number = 1; number < 105*17+1; number++) {
                                                          from the end of the current output string to a blank string.
                                                          this reverses the order of those chunks in the string*/
         }
-        output = newoutput
+        output = newoutput; //replaces output with chunkwise reversed string if number is a multiple of 17
     }
     if (number % 11 === 0) {
         output = 'Bong' //replaces output with 'Bong' if number is a multiple of 11
     }
     if (output === '') {
-        console.log(number);
+        console.log(number); //if nothing special happened, prints out the number
     } else {
-        console.log(output);
+        console.log(output); //otherwise, prints out the constructed output
     }
 }
