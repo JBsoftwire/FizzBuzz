@@ -17,6 +17,12 @@ for (let number = 1; number < maximum+1; number++) {
     if (number % 7 === 0) {
         output += 'Bang'; //adds 'Bang' to the output if number is a multiple of 7
     }
+    if (number % 11 === 0) {
+        output = 'Bong'; //replaces output with 'Bong' if number is a multiple of 11
+        if (number % 13 === 0) {
+            output = 'FezzBong'; //handles special case of a multiple of both 11 and 13
+        }
+    }
     if (number % 17 === 0) {
         let newoutput = '';
         for (let chunk = parseInt(output.length/4); chunk > 0; chunk--) {
@@ -24,10 +30,7 @@ for (let number = 1; number < maximum+1; number++) {
                                                          from the end of the current output string to a blank string.
                                                          this reverses the order of those chunks in the string*/
         }
-        output = newoutput; //replaces output with chunkwise reversed string if number is a multiple of 17
-    }
-    if (number % 11 === 0) {
-        output = 'Bong' //replaces output with 'Bong' if number is a multiple of 11
+        output = newoutput; //replaces output with 4char-chunkwise reversed string if number is a multiple of 17
     }
     if (output === '') {
         console.log(number); //if nothing special happened, prints out the number
