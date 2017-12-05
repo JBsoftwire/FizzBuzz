@@ -27,8 +27,9 @@ for (let number = 1; number < maximum+1; number++) {
         let newoutput = '';
         for (let chunk = parseInt(output.length/4); chunk > 0; chunk--) {
             newoutput += output.substr((chunk-1)*4, 4);/*constructs a new output string by appending 4-character chunks
-                                                         from the end of the current output string to a blank string.
-                                                         this reverses the order of those chunks in the string*/
+                                                         from the end to the start of the current output string to a
+                                                         blank string. this reverses the order of those chunks in the
+                                                         string*/
         }
         output = newoutput; //replaces output with 4char-chunkwise reversed string if number is a multiple of 17
     }
