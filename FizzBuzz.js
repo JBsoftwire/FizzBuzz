@@ -1,6 +1,7 @@
 const readline = require('readline-sync');
-console.log('Enter an integer')
-const maximum = parseInt(readline.prompt());
+console.log('Enter an integer:')
+const maximum = parseInt(readline.prompt());//takes input and converts to an integer
+console.log('')
 for (let number = 1; number < maximum+1; number++) {
     let output = '';
     if (number % 3 === 0) {

@@ -17,9 +17,3 @@ if (operator1 == '+') { //this whole section could also be done with a switch
 } else {
     console.log('ERROR: invalid operator')
 }
-
-// comment
-
-/*
-also a comment
- */
